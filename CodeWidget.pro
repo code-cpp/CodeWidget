@@ -8,8 +8,16 @@ CONFIG += c++17
 # In order to do so, uncomment the following line.
 DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
+DEFINES += SCINTILLA_QT SCI_LEXER INCLUDE_DEPRECATED_FEATURES
 
-include(qscintilla/src/qscintilla.pri)
+QT += widgets
+!ios:QT += printsupport
+macx:lessThan(QT_MAJOR_VERSION, 6) {
+    QT += macextras
+}
+
+
+include(qscintilla/qscintilla.pri)
 
 greaterThan(QT_MAJOR_VERSION,4){
         TARGET_ARCH=$${QT_ARCH}

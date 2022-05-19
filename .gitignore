@@ -1,0 +1,9 @@
+/bin
+/build
+/CodeWidget.pro.user
+/Makefile
+/Makefile.Debug
+/Makefile.Release
+/debug
+/release
+/.qmake.stash

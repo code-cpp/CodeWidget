@@ -120,13 +120,15 @@ HEADERS = \
     $$PWD/scintilla/src/UniConversion.h \
     $$PWD/scintilla/src/UniqueString.h \
     $$PWD/scintilla/src/ViewStyle.h \
-    $$PWD/scintilla/src/XPM.h
+    $$PWD/scintilla/src/XPM.h \
+    $$PWD/src/QSci/qscilexervb.h
 
 
 !ios:HEADERS += $$PWD/src/Qsci/qsciprinter.h
 
 
 SOURCES = \
+    $$PWD/src/qscilexervb.cpp \
     $$PWD/src/qsciscintilla.cpp \
     $$PWD/src/qsciscintillabase.cpp \
     $$PWD/src/qsciabstractapis.cpp \

@@ -22,4 +22,5 @@ class CodeWidget : public QWidget {
   Ui::CodeWidget *ui;
   QsciScintilla *editor;
 };
+
 #endif  // CODEWIDGET_H

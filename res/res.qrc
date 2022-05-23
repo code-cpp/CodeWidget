@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/">
+        <file>keywords/CppWord</file>
+        <file>keywords/CsharpWord</file>
+        <file>keywords/VbWord</file>
+    </qresource>
+</RCC>

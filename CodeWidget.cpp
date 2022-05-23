@@ -1,14 +1,11 @@
 #include "CodeWidget.h"
 
-// QsciScintilla本体
-#include <Qsci/qsciscintilla.h>
-//自动补全的apis
-#include <Qsci/qsciapis.h>
-// c++语言的词法分析器
 #include <Qsci/qsciapis.h>
 #include <Qsci/qscilexercpp.h>
 #include <Qsci/qscilexercsharp.h>
+#include <Qsci/qscilexervb.h>
 #include <Qsci/qscilexerverilog.h>
+#include <Qsci/qsciscintilla.h>
 
 #include <QHBoxLayout>
 
@@ -27,44 +24,12 @@ CodeWidget::CodeWidget(QWidget *parent)
                         QsciScintilla::SC_CP_UTF8);
 
   QsciLexer *textLexer;
-  textLexer = new QsciLexerCPP;
-  textLexer->setColor(QColor(0x00, 0x80, 0x00), QsciLexerCPP::Comment);
-  textLexer->setColor(QColor(0xff, 0x00, 0x00), QsciLexerCPP::Number);
-  textLexer->setColor(QColor(0x00, 0x80, 0x00), QsciLexerCPP::CommentLineDoc);
-  textLexer->setColor(QColor(0x00, 0x80, 0x00),
-                      QsciLexerCPP::DoubleQuotedString);
-  textLexer->setColor(QColor(0xff, 0x00, 0xff),
-                      QsciLexerCPP::SingleQuotedString);
-  textLexer->setColor(QColor(0x00, 0x55, 0xff), QsciLexerCPP::Keyword);
-  textLexer->setColor(QColor(0x70, 0x55, 0x60), QsciLexerCPP::PreProcessor);
-
+  textLexer = new QsciLexerVB;
   editor->setLexer(textLexer);
 
   QsciAPIs *apis = new QsciAPIs(textLexer);
-  //在这里可以添加自定义的自动完成函数
-  apis->add(QString("iostream"));
-  apis->add(QString("#include"));
-  apis->add(QString("std"));
-  apis->add(QString("cout"));
-  apis->add(QString("cin"));
-  apis->add(QString("using"));
-  apis->add(QString("namespace"));
-  apis->add(QString("main"));
-  apis->add(QString("return"));
-  apis->add(QString("endl"));
-  apis->add(QString("class"));
-  apis->add(QString("char"));
-  apis->add(QString("uchar"));
-  apis->add(QString("short"));
-  apis->add(QString("int"));
-  apis->add(QString("long"));
-  apis->add(QString("unsigned"));
-  apis->add(QString("float"));
-  apis->add(QString("double"));
-  apis->add(QString("sruct"));
-  apis->add(QString("enum"));
-  apis->add(QString("union"));
-
+  QString filename = ":/keywords/CppWord";
+  apis->load(filename);
   apis->prepare();
 
   //设置自动完成所有项

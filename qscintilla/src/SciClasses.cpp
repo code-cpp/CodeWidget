@@ -67,8 +67,8 @@ void QsciSciCallTip::paintEvent(QPaintEvent *) {
 void QsciSciCallTip::mousePressEvent(QMouseEvent *e) {
   Scintilla::Point pt;
 
-  pt.x = e->position().x();
-  pt.y = e->position().y();
+  pt.x = e->pos().x();
+  pt.y = e->pos().y();
 
   sci->ct.MouseClick(pt);
   sci->CallTipClick();

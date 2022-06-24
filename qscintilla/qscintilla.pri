@@ -5,58 +5,59 @@ INCLUDEPATH += $$PWD/scintilla/lexlib
 INCLUDEPATH += $$PWD/scintilla/src
 
 HEADERS = \
-    $$PWD/src/QSci/qsciglobal.h \
-    $$PWD/src/QSci/qsciscintilla.h \
-    $$PWD/src/QSci/qsciscintillabase.h \
-    $$PWD/src/QSci/qsciabstractapis.h \
-    $$PWD/src/QSci/qsciapis.h \
-    $$PWD/src/QSci/qscicommand.h \
-    $$PWD/src/QSci/qscicommandset.h \
-    $$PWD/src/QSci/qscidocument.h \
-    $$PWD/src/QSci/qscilexer.h \
-    $$PWD/src/QSci/qscilexeravs.h \
-    $$PWD/src/QSci/qscilexerbash.h \
-    $$PWD/src/QSci/qscilexerbatch.h \
-    $$PWD/src/QSci/qscilexercmake.h \
-    $$PWD/src/QSci/qscilexercoffeescript.h \
-    $$PWD/src/QSci/qscilexercpp.h \
-    $$PWD/src/QSci/qscilexercsharp.h \
-    $$PWD/src/QSci/qscilexercss.h \
-    $$PWD/src/QSci/qscilexercustom.h \
-    $$PWD/src/QSci/qscilexerd.h \
-    $$PWD/src/QSci/qscilexerdiff.h \
-    $$PWD/src/QSci/qscilexeredifact.h \
-    $$PWD/src/QSci/qscilexerfortran.h \
-    $$PWD/src/QSci/qscilexerfortran77.h \
-    $$PWD/src/QSci/qscilexerhtml.h \
-    $$PWD/src/QSci/qscilexeridl.h \
-    $$PWD/src/QSci/qscilexerjava.h \
-    $$PWD/src/QSci/qscilexerjavascript.h \
-    $$PWD/src/QSci/qscilexerjson.h \
-    $$PWD/src/QSci/qscilexerlua.h \
-    $$PWD/src/QSci/qscilexermakefile.h \
-    $$PWD/src/QSci/qscilexermarkdown.h \
-    $$PWD/src/QSci/qscilexermatlab.h \
-    $$PWD/src/QSci/qscilexeroctave.h \
-    $$PWD/src/QSci/qscilexerpascal.h \
-    $$PWD/src/QSci/qscilexerperl.h \
-    $$PWD/src/QSci/qscilexerpostscript.h \
-    $$PWD/src/QSci/qscilexerpo.h \
-    $$PWD/src/QSci/qscilexerpov.h \
-    $$PWD/src/QSci/qscilexerproperties.h \
-    $$PWD/src/QSci/qscilexerpython.h \
-    $$PWD/src/QSci/qscilexerruby.h \
-    $$PWD/src/QSci/qscilexerspice.h \
-    $$PWD/src/QSci/qscilexersql.h \
-    $$PWD/src/QSci/qscilexertcl.h \
-    $$PWD/src/QSci/qscilexertex.h \
-    $$PWD/src/QSci/qscilexerverilog.h \
-    $$PWD/src/QSci/qscilexervhdl.h \
-    $$PWD/src/QSci/qscilexerxml.h \
-    $$PWD/src/QSci/qscilexeryaml.h \
-    $$PWD/src/QSci/qscimacro.h \
-    $$PWD/src/QSci/qscistyle.h \
-    $$PWD/src/QSci/qscistyledtext.h \
+    $$PWD/src/Qsci/qsciglobal.h \
+    $$PWD/src/Qsci/qsciscintilla.h \
+    $$PWD/src/Qsci/qsciscintillabase.h \
+    $$PWD/src/Qsci/qsciabstractapis.h \
+    $$PWD/src/Qsci/qsciapis.h \
+    $$PWD/src/Qsci/qscicommand.h \
+    $$PWD/src/Qsci/qscicommandset.h \
+    $$PWD/src/Qsci/qscidocument.h \
+    $$PWD/src/Qsci/qscilexer.h \
+    $$PWD/src/Qsci/qscilexeravs.h \
+    $$PWD/src/Qsci/qscilexerbash.h \
+    $$PWD/src/Qsci/qscilexerbatch.h \
+    $$PWD/src/Qsci/qscilexercmake.h \
+    $$PWD/src/Qsci/qscilexercoffeescript.h \
+    $$PWD/src/Qsci/qscilexercpp.h \
+    $$PWD/src/Qsci/qscilexercsharp.h \
+    $$PWD/src/Qsci/qscilexercss.h \
+    $$PWD/src/Qsci/qscilexercustom.h \
+    $$PWD/src/Qsci/qscilexerd.h \
+    $$PWD/src/Qsci/qscilexerdiff.h \
+    $$PWD/src/Qsci/qscilexeredifact.h \
+    $$PWD/src/Qsci/qscilexerfortran.h \
+    $$PWD/src/Qsci/qscilexerfortran77.h \
+    $$PWD/src/Qsci/qscilexerhtml.h \
+    $$PWD/src/Qsci/qscilexeridl.h \
+    $$PWD/src/Qsci/qscilexerjava.h \
+    $$PWD/src/Qsci/qscilexerjavascript.h \
+    $$PWD/src/Qsci/qscilexerjson.h \
+    $$PWD/src/Qsci/qscilexerlua.h \
+    $$PWD/src/Qsci/qscilexermakefile.h \
+    $$PWD/src/Qsci/qscilexermarkdown.h \
+    $$PWD/src/Qsci/qscilexermatlab.h \
+    $$PWD/src/Qsci/qscilexeroctave.h \
+    $$PWD/src/Qsci/qscilexerpascal.h \
+    $$PWD/src/Qsci/qscilexerperl.h \
+    $$PWD/src/Qsci/qscilexerpostscript.h \
+    $$PWD/src/Qsci/qscilexerpo.h \
+    $$PWD/src/Qsci/qscilexerpov.h \
+    $$PWD/src/Qsci/qscilexerproperties.h \
+    $$PWD/src/Qsci/qscilexerpython.h \
+    $$PWD/src/Qsci/qscilexerruby.h \
+    $$PWD/src/Qsci/qscilexerspice.h \
+    $$PWD/src/Qsci/qscilexersql.h \
+    $$PWD/src/Qsci/qscilexertcl.h \
+    $$PWD/src/Qsci/qscilexertex.h \
+    $$PWD/src/Qsci/qscilexerverilog.h \
+    $$PWD/src/Qsci/qscilexervhdl.h \
+    $$PWD/src/Qsci/qscilexerxml.h \
+    $$PWD/src/Qsci/qscilexeryaml.h \
+    $$PWD/src/Qsci/qscimacro.h \
+    $$PWD/src/Qsci/qscistyle.h \
+    $$PWD/src/Qsci/qscistyledtext.h \
+    $$PWD/src/Qsci/qscilexervb.h \
     $$PWD/src/ListBoxQt.h \
     $$PWD/src/SciAccessibility.h \
     $$PWD/src/SciClasses.h \
@@ -120,8 +121,7 @@ HEADERS = \
     $$PWD/scintilla/src/UniConversion.h \
     $$PWD/scintilla/src/UniqueString.h \
     $$PWD/scintilla/src/ViewStyle.h \
-    $$PWD/scintilla/src/XPM.h \
-    $$PWD/src/QSci/qscilexervb.h
+    $$PWD/scintilla/src/XPM.h
 
 
 !ios:HEADERS += $$PWD/src/Qsci/qsciprinter.h

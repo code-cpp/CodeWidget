@@ -810,7 +810,7 @@ QString QsciAPIs::prepName(const QString &filename, bool mkpath) const {
 
 // Return installed API files.
 QStringList QsciAPIs::installedAPIFiles() const {
-  QString qtdir = QLibraryInfo::path(QLibraryInfo::DataPath);
+  QString qtdir = QLibraryInfo::location(QLibraryInfo::DataPath);
 
   QDir apidir =
       QDir(QString("%1/qsci/api/%2").arg(qtdir).arg(lexer()->lexer()));

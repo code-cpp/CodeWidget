@@ -449,19 +449,19 @@ void QsciScintillaBase::mouseDoubleClickEvent(QMouseEvent *e) {
       sci->lastClickTime + Scintilla::Platform::DoubleClickTime() - 1;
 
   sci->ButtonDownWithModifiers(
-      Scintilla::Point(e->position().x(), e->position().y()), clickTime,
+      Scintilla::Point(e->pos().x(), e->pos().y()), clickTime,
       eventModifiers(e));
 
   // Remember the current position and time in case it turns into a triple
   // click.
-  triple_click_at = e->globalPosition().toPoint();
+  triple_click_at = e->globalPos();
   triple_click.start(QApplication::doubleClickInterval());
 }
 
 // Handle a mouse move.
 void QsciScintillaBase::mouseMoveEvent(QMouseEvent *e) {
   sci->ButtonMoveWithModifiers(
-      Scintilla::Point(e->position().x(), e->position().y()), 0,
+      Scintilla::Point(e->pos().x(), e->pos().y()), 0,
       eventModifiers(e));
 }
 
@@ -469,7 +469,7 @@ void QsciScintillaBase::mouseMoveEvent(QMouseEvent *e) {
 void QsciScintillaBase::mousePressEvent(QMouseEvent *e) {
   setFocus();
 
-  Scintilla::Point pt(e->position().x(), e->position().y());
+  Scintilla::Point pt(e->pos().x(), e->pos().y());
 
   if (e->button() == Qt::LeftButton || e->button() == Qt::RightButton) {
     unsigned clickTime;
@@ -477,7 +477,7 @@ void QsciScintillaBase::mousePressEvent(QMouseEvent *e) {
     // It is a triple click if the timer is running and the mouse hasn't
     // moved too much.
     if (triple_click.isActive() &&
-        (e->globalPosition() - triple_click_at).manhattanLength() <
+        (e->globalPos() - triple_click_at).manhattanLength() <
             QApplication::startDragDistance())
       clickTime =
           sci->lastClickTime + Scintilla::Platform::DoubleClickTime() - 1;
@@ -525,7 +525,7 @@ void QsciScintillaBase::mousePressEvent(QMouseEvent *e) {
 void QsciScintillaBase::mouseReleaseEvent(QMouseEvent *e) {
   if (e->button() != Qt::LeftButton) return;
 
-  Scintilla::Point pt(e->position().x(), e->position().y());
+  Scintilla::Point pt(e->pos().x(), e->pos().y());
 
   if (sci->HaveMouseCapture()) {
     bool ctrl = e->modifiers() & Qt::ControlModifier;
@@ -579,7 +579,7 @@ void QsciScintillaBase::dragMoveEvent(QDragMoveEvent *e) {
     e->acceptProposedAction();
   } else {
     sci->SetDragPosition(sci->SPositionFromLocation(
-        Scintilla::Point(e->position().x(), e->position().y()), false, false,
+        Scintilla::Point(e->pos().x(), e->pos().y()), false, false,
         sci->UserVirtualSpace()));
 
     acceptAction(e);
